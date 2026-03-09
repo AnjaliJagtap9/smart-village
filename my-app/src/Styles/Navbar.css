@@ -1,0 +1,49 @@
+
+.top-strip {
+  height: 28px;
+  background-color: #f1f1f1;
+}
+.navbar {
+  margin-top: opx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b5ed7;
+  padding: 15px 30px;
+  color: white;
+}
+
+.navbar h2 {
+  margin: 10px;
+
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.how-to-apply {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #ffc107;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.how-to-apply:hover {
+  background-color: #ffb300;
+}
