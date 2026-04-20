@@ -1,0 +1,149 @@
+/* SEARCH BAR TOP */
+
+.search-box {
+  margin-bottom: 18px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  font-size: 15px;
+  background: white;
+  color: #163d78;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.search-box input::placeholder {
+  color: #6b7280;
+}
+/* CARD */
+.announcement-card {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+  border-left: 5px solid #3b82f6;
+}
+
+.announcement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* URGENT */
+.announcement-card.urgent {
+  border-left: 5px solid red;
+}
+
+/* TYPE BADGE */
+.type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 8px;
+  margin-right: 6px;
+}
+
+/* TYPE COLORS */
+.type-badge.alert {
+  background: #dc2626;
+}
+
+.type-badge.notice {
+  background: #2563eb;
+}
+
+.type-badge.meeting {
+  background: #f59e0b;
+}
+
+.type-badge.scheme {
+  background: #16a34a;
+}
+
+/* STATUS BADGE */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* STATUS COLORS */
+.status-badge.active {
+  background: #16a34a;
+}
+
+.status-badge.inactive {
+  background: #6b7280;
+}
+
+/* TITLE */
+.announcement-card h4 {
+  font-size: 20px;
+  margin: 5px 0 8px;
+  color: #111827;
+}
+
+/* MESSAGE */
+.announcement-card p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* META */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* NEW BADGE */
+.new-badge {
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar-title {
+    font-size: 22px;
+  }
+
+  .announcement-card h4 {
+    font-size: 18px;
+  }
+
+  .announcement-card p {
+    font-size: 14px;
+  }
+
+  .filter-buttons button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

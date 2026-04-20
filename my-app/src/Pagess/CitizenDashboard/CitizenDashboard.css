@@ -1,0 +1,292 @@
+/* ===========================
+   CITIZEN DASHBOARD CSS
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f7fc;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+  width: 270px;
+  background: linear-gradient(180deg, #0f3d78, #174d97);
+  padding: 24px 16px;
+  color: white;
+  box-shadow: 4px 0 14px rgba(0,0,0,0.08);
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.sidebar button {
+  width: 100%;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sidebar button:hover {
+  background: #ff9800;
+  transform: translateX(4px);
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+.main-area {
+  flex: 1;
+  padding: 24px;
+}
+
+/* ===========================
+   TOPBAR
+=========================== */
+.topbar {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.topbar h1 {
+  font-size: 30px;
+  color: #163d78;
+}
+
+.topbar span {
+  color: #666;
+  font-size: 15px;
+}
+
+/* ===========================
+   CONTENT CARD
+=========================== */
+.page-card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.page-card h2 {
+  color: #163d78;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.page-card input,
+.page-card textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.page-card input:focus,
+.page-card textarea:focus {
+  outline: none;
+  border-color: #174d97;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.main-btn {
+  background: #163d78;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: #0c2c59;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+.table-scroll {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.data-table th {
+  background: #f8fbff;
+  color: #163d78;
+}
+
+/* ===========================
+   POWER BI STATS
+=========================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.stat-card h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+.blue {
+  border-top: 5px solid #1e88e5;
+}
+
+.orange {
+  border-top: 5px solid #fb8c00;
+}
+
+.green {
+  border-top: 5px solid #43a047;
+}
+
+.red {
+  border-top: 5px solid #e53935;
+}
+
+/* ===========================
+   CHART SECTION
+=========================== */
+.chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.chart-box {
+  background: white;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.chart-box h3 {
+  color: #163d78;
+  margin-bottom: 20px;
+}
+
+/* BAR CHART */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 220px;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(180deg,#42a5f5,#1e88e5);
+  border-radius: 8px 8px 0 0;
+}
+
+.h70 { height: 70%; }
+.h40 { height: 40%; }
+.h90 { height: 90%; }
+
+/* PIE STYLE */
+.circle-chart {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #43a047 0% 50%,
+    #e0e0e0 50% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+  color: #163d78;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .chart-row {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

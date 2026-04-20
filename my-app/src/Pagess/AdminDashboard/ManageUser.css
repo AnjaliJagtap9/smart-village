@@ -1,0 +1,143 @@
+.manageUserPage {
+  padding: 30px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.manageUserPage h2 {
+  margin-bottom: 20px;
+}
+
+/* SEARCH + FILTER */
+.userControls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.userControls input,
+.userControls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccd0d5;
+  font-size: 14px;
+}
+
+/* TABLE */
+.userTable {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.userTable th,
+.userTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.userTable th {
+  background: #1877f2;
+  color: white;
+  font-weight: 500;
+}
+
+/* STATUS */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.status.active {
+  background: #d4f4dd;
+  color: #1a7f37;
+}
+
+.status.blocked {
+  background: #ffe5e5;
+  color: #b30000;
+}
+
+/* BUTTONS */
+.actionBtn {
+  padding: 6px 10px;
+  margin-right: 6px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.actionBtn:hover {
+  background: #166fe5;
+}
+
+.deleteBtn {
+  padding: 6px 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.deleteBtn:hover {
+  background: #b02a37;
+}
+.userTable {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;   /* IMPORTANT */
+  margin-top: 15px;
+}
+
+/* Header */
+.userTable thead tr {
+  background-color: #1877f2;
+}
+
+.userTable th {
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #1877f2;   /* COLUMN LINES */
+}
+
+/* Body cells */
+.userTable td {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;   /* ROW + COLUMN LINES */
+}
+
+/* Hover (optional but clean) */
+.userTable tbody tr:hover {
+  background-color: #f9fbff;
+}
+
+/* Status badges (KEEP SAME) */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.status.active {
+  background: #d4f4dd;
+  color: #1a7f37;
+}
+
+.status.blocked {
+  background: #fde2e2;
+  color: #b42318;
+}
+

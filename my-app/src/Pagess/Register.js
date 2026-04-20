@@ -1,6 +1,8 @@
+import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Register.css";
+import { BASE_URL } from "../api/api";
 
 function Register() {
   const navigate = useNavigate();
@@ -17,7 +19,7 @@ function Register() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     const { username, email, password, address, role } = form;
@@ -27,8 +29,25 @@ function Register() {
       return;
     }
 
-    alert("Registration Successful!");
-    navigate("/login");
+    try {
+      await axios.post(`${BASE_URL}/auth/register`, {
+        name: username,
+        email,
+        password,
+        address,
+        role: role.toUpperCase()
+      });
+
+      alert("Registration Successful!");
+      navigate("/login");
+
+    } catch (error) {
+      console.log("REGISTER ERROR:", error);
+
+      alert(
+        error?.response?.data?.message || "Registration Failed"
+      );
+    }
   };
 
   return (
@@ -37,7 +56,6 @@ function Register() {
         <h2>Village360 Registration</h2>
 
         <form autoComplete="off" onSubmit={handleRegister}>
-
           <input
             className="fullInput"
             name="username"
@@ -74,17 +92,16 @@ function Register() {
             onChange={handleChange}
           />
 
-          <label>Register As</label>
           <select
             className="fullInput"
             name="role"
             value={form.role}
             onChange={handleChange}
           >
-            <option value="" disabled>Select Role</option>
-            <option value="Citizen">Citizen</option>
-            <option value="Admin">Admin</option>
-            <option value="Sarpanch">Sarpanch</option>
+            <option value="">Select Role</option>
+            <option value="CITIZEN">CITIZEN</option>
+            <option value="ADMIN">ADMIN</option>
+            <option value="SARPANCH">SARPANCH</option>
           </select>
 
           <button type="submit" className="blueBtn">

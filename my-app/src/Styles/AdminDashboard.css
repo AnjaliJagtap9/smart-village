@@ -1,0 +1,364 @@
+/* ===================================
+   ADMIN DASHBOARD FULL CSS
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* ===================================
+   SIDEBAR
+=================================== */
+.admin-sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #0f3d78, #174ea6);
+  padding: 24px 18px;
+  color: white;
+  box-shadow: 4px 0 14px rgba(0,0,0,0.08);
+}
+
+.admin-sidebar h2 {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.admin-sidebar button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-sidebar button:hover {
+  background: white;
+  color: #174ea6;
+  transform: translateX(5px);
+}
+
+.logout-btn {
+  margin-top: 24px;
+  background: #ef4444 !important;
+}
+
+.logout-btn:hover {
+  background: #dc2626 !important;
+  color: white !important;
+}
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+.admin-main {
+  flex: 1;
+  padding: 28px;
+}
+
+/* ===================================
+   CARD BOX
+=================================== */
+.card-box {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.card-box h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f3d78;
+  margin-bottom: 24px;
+}
+
+/* ===================================
+   FORM
+=================================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-grid input,
+.form-grid textarea,
+.form-grid select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-grid textarea {
+  grid-column: span 2;
+  height: 120px;
+  resize: none;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus,
+.form-grid select:focus {
+  border-color: #2563eb;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+.main-btn,
+.small-btn,
+.progress-btn,
+.resolve-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-btn {
+  background: #174ea6;
+  color: white;
+  grid-column: span 2;
+}
+
+.main-btn:hover {
+  background: #0f3d78;
+}
+
+.small-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.small-btn:hover {
+  background: #1d4ed8;
+}
+
+.progress-btn {
+  background: #f59e0b;
+  color: white;
+  margin-right: 6px;
+}
+
+.progress-btn:hover {
+  background: #d97706;
+}
+
+.resolve-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.resolve-btn:hover {
+  background: #15803d;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+table th {
+  background: #174ea6;
+  color: white;
+  padding: 14px;
+  font-size: 14px;
+  text-align: left;
+}
+
+table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+table tr:hover {
+  background: #f8fafc;
+}
+
+/* ===================================
+   STATUS COLORS
+=================================== */
+.green {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.red {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+@media (max-width: 992px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+  }
+
+  .admin-main {
+    padding: 16px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid textarea,
+  .main-btn {
+    grid-column: span 1;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+/* =====================================
+   SCHEME APPLICATION TABLE EXTRA CSS
+   Add this below your current CSS
+===================================== */
+
+/* Better wide table for applications */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1600px;   /* wide because many fields */
+}
+
+/* Scroll wrapper if needed */
+.card-box {
+  overflow-x: auto;
+}
+
+/* Header */
+table th {
+  background: #174ea6;
+  color: white;
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+
+/* Cells */
+table td {
+  padding: 13px 12px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+/* Row hover */
+table tr:hover {
+  background: #f8fafc;
+}
+
+/* Status Badge */
+.green,
+.red,
+.pending-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.pending-status {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+/* Buttons */
+.progress-btn,
+.resolve-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: 0.3s;
+}
+
+.progress-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.progress-btn:hover {
+  background: #15803d;
+}
+
+.resolve-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.resolve-btn:hover {
+  background: #dc2626;
+}
+
+/* Updated text */
+.updated-text {
+  font-weight: 700;
+  color: #6b7280;
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+  .card-box {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 1600px;
+  }
+}

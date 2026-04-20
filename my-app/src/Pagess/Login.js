@@ -1,6 +1,8 @@
+import axios from "axios";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import "../Styles/Login.css";
+import { BASE_URL } from "../api/api";
 
 function Login() {
   const navigate = useNavigate();
@@ -9,24 +11,50 @@ function Login() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (!role || !email || !pass) {
+    if (!email || !pass || !role) {
       alert("Please fill all fields!");
       return;
     }
 
-    if (role === "Citizen") navigate("/citizen-dashboard");
-    else if (role === "Admin") navigate("/admin-dashboard");
-    else if (role === "Sarpanch") navigate("/sarpanch-dashboard");
+    try {
+      const response = await axios.post(`${BASE_URL}/auth/login`, {
+        email,
+        password: pass,
+      });
+
+      // token can be response.data OR response.data.token
+      const token = response.data.token || response.data;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", role);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email,
+          role,
+        })
+      );
+
+      alert("Login Successful");
+
+      if (role === "ADMIN") navigate("/admin");
+      else if (role === "SARPANCH") navigate("/sarpanch");
+      else if (role === "CITIZEN") navigate("/citizen");
+    } catch (error) {
+      console.log(error);
+      alert(error?.response?.data?.message || "Invalid Login");
+    }
   };
 
   return (
     <div className="login-container">
       <div className="login-card">
         <h2>Village360 Login</h2>
-         <form autoComplete="off" onSubmit={handleLogin}>
+
+        <form onSubmit={handleLogin}>
           <input
             className="fullInput"
             type="email"
@@ -43,16 +71,15 @@ function Login() {
             onChange={(e) => setPass(e.target.value)}
           />
 
-          <label>Login As</label>
           <select
             className="fullInput"
             value={role}
             onChange={(e) => setRole(e.target.value)}
           >
-            <option value="" disabled>Select Role</option>
-            <option value="Citizen">Citizen</option>
-            <option value="Admin">Admin</option>
-            <option value="Sarpanch">Sarpanch</option>
+            <option value="">Select Role</option>
+            <option value="ADMIN">Admin</option>
+            <option value="SARPANCH">Sarpanch</option>
+            <option value="CITIZEN">Citizen</option>
           </select>
 
           <button type="submit" className="greenBtn">

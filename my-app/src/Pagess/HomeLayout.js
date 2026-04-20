@@ -2,6 +2,7 @@ import Header from "../Component/Header";
 import Navbar from "../Component/Navbar";
 import LeftSidebar from "../Component/LeftSidebar";
 import RightSidebar from "../Component/RightSidebar";
+import Footer from "../Component/Footer";
 import { Outlet } from "react-router-dom";
 import "../Styles/HomeLayout.css";
 
@@ -10,7 +11,7 @@ function HomeLayout() {
     <>
       <Header />
       <Navbar />
-
+     
       <div className="layout">
         
         {/* LEFT SIDEBAR */}
@@ -29,6 +30,7 @@ function HomeLayout() {
         </div>
 
       </div>
+       <Footer />
     </>
   );
 }

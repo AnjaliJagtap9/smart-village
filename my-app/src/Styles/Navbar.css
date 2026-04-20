@@ -1,49 +1,74 @@
-
-.top-strip {
-  height: 28px;
-  background-color: #f1f1f1;
-}
-.navbar {
-  margin-top: opx;
+.dbt-navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #0b5ed7;
-  padding: 15px 30px;
+  background: #1b3f78;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Orange first block */
+.dbt-apply {
+  background: #f58220;
   color: white;
+  padding: 18px 26px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  min-width: 180px;
+  text-align: center;
 }
 
-.navbar h2 {
-  margin: 10px;
-
-  font-size: 22px;
+/* Arrow shape */
+.dbt-apply::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #f58220;
+  z-index: 2;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
+/* Ribbon items */
+.dbt-item {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  padding: 14px 24px 14px 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 210px;
+  border-right: 1px solid rgba(255,255,255,0.15);
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* Left arrow cut */
+.dbt-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #163b74;
 }
 
-.how-to-apply {
-  cursor: pointer;
-  font-weight: 600;
-  background-color: #ffc107;
-  color: #000;
-  padding: 6px 12px;
-  border-radius: 4px;
+/* Hover */
+.dbt-item:hover {
+  background: #29589c;
 }
 
-.how-to-apply:hover {
-  background-color: #ffb300;
-}
+/* Round Icon */
+.icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #6e8db9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+} 

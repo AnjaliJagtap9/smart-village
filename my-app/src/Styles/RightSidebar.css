@@ -1,23 +1,86 @@
+/* MAIN */
 .right-sidebar {
-  width: 200px;
-  padding: 20px;
-  background-color: #f4f6f9;
-  border-left: 1px solid #ddd;
-  height: 100vh;
-}
-.sidebar-box {
-  display: block;
-  background-color: #0d6efd;
-  color: white;
-  padding: 12px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
+  padding: 14px;
+  background: #f3f3f3;
 }
 
-.sidebar-box:hover {
-  background-color: #084298;
+/* BOX */
+.action-box {
+  background: white;
+  border: 1px solid #d2d2d2;
+  padding: 18px 16px;
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.action-box:hover {
+  border-color: #f58220;
+  background: #fff8f1;
+  transform: translateX(3px);
+}
+
+/* DASHBOARD COLORS */
+.dashboard {
+  font-weight: 600;
+}
+
+.citizen {
+  border-left: 5px solid #2196f3;
+}
+
+.admin {
+  border-left: 5px solid #4caf50;
+}
+
+.sarpanch {
+  border-left: 5px solid #ff9800;
+}
+
+/* MANUAL BOX */
+.manual-box {
+  background: white;
+  border: 1px solid #d2d2d2;
+  margin-top: 10px;
+}
+
+/* TITLE */
+.manual-title {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+/* LINKS */
+.manual-links a {
+  display: block;
+  padding: 12px 15px;
+  color: #0056c9;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.manual-links a:hover {
+  background: #f5f9ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .action-box {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .manual-title {
+    font-size: 16px;
+  }
+
+  .manual-links a {
+    font-size: 14px;
+  }
 }

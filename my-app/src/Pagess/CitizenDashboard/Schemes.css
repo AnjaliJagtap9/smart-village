@@ -1,0 +1,25 @@
+.scheme-container {
+  padding: 20px;
+}
+
+.scheme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scheme-row {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.scheme-row h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.scheme-row p {
+  margin: 5px 0;
+  color: #555;
+}

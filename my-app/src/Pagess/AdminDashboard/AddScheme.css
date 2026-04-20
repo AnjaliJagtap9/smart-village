@@ -1,0 +1,106 @@
+.schemePage {
+  padding: 30px;
+}
+
+.schemePage h2 {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.schemeForm {
+  display: grid;
+  gap: 12px;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.schemeForm input,
+.schemeForm textarea,
+.schemeForm select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.schemeForm textarea {
+  resize: none;
+  height: 80px;
+}
+
+.schemeForm button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.schemeForm button:hover {
+  background-color: #1e4fd6;
+}
+
+/* TABLE */
+.schemeTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schemeTable th,
+.schemeTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.schemeTable th {
+  background-color: #f3f4f6;
+}
+
+.noData {
+  text-align: center;
+  color: gray;
+}
+
+/* STATUS */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.status.active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+.updateBtn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.updateBtn:hover {
+  background-color: #084298;
+}
+
+.deleteBtn:hover {
+  background-color: #bb2d3b;
+}

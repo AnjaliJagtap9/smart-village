@@ -1,0 +1,74 @@
+.complaintsPage {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+.searchFilterRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchFilterRow input, .searchFilterRow select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.complaintGrid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.complaintCard {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  cursor: default;
+}
+
+.complaintCard:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.complaintCard.recent {
+  cursor: pointer;
+}
+
+.complaintCard.recent.expanded {
+  background-color: #f9f9f9;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.status.pending { background-color: #ffecb3; color: #a67c00; }
+.status.approved { background-color: #c8e6c9; color: #256029; }
+.status.resolved { background-color: #b3e5fc; color: #01579b; }
+
+.actionBox {
+  margin-top: 10px;
+}
+
+.noComplaints {
+  color: #999;
+  font-style: italic;
+}
